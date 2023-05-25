@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-bootmjs",
-  "version": "0.5.0",
+  "version": "0.7.0",
   "description": "AWS Lambda bootloader for ES modules.",
   "type": "module",
   "module": "lib/index.mjs",
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/aellison5505/aws-lambda-bootmjs.git"
   },
   "keywords": [
-    "AWS"
+    "AWS lmabda runtime"
   ],
   "author": "Anthony Ellison",
   "license": "MIT",

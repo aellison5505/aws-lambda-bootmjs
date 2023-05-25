@@ -447,6 +447,8 @@ __metadata:
     sinon: ^15.1.0
     stylelint: ^15.6.2
     typescript: ^5.0.4
+  bin:
+    aws-lambda-bootmjs: ./lib/index.mjs
   languageName: unknown
   linkType: soft
 

@@ -10,6 +10,7 @@ let main = async () => {
     
     await boot.startRuntime();
     //console.log("done");
+    process.nextTick(main);
     
   } catch (e) {
    // throw new Error(e);

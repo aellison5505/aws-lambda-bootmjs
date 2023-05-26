@@ -8,7 +8,8 @@ export class BootStrap {
   runtime: Runtime
 
   constructor() {
-
+    console.log(process.env);
+    
     this.runtime = new Runtime();
   }
 

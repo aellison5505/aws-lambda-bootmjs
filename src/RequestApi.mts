@@ -2,6 +2,7 @@ import { RequestOptions } from "http";
 import { URL } from "url";
 
 const http = await import("node:http");
+//import {} from "../package.json"
 
 
 export class RequestApi {
@@ -21,7 +22,7 @@ export class RequestApi {
         .then((data) => res(data))
         .catch(async (err) => {
           await this.sendError(err).catch((err) => rej(err));
-          rej(err);
+          rej(err)
         });
     });
   }
@@ -48,7 +49,9 @@ export class RequestApi {
       };
 
       await this.send(options, sendRes)
-        .then((data) => res(data))
+        .then((data) =>{
+          res(data);
+        } )
         .catch(async (err) => {
           //await this.sendError(err, headers).catch((err) => rej(err));
           rej(err);
@@ -94,6 +97,7 @@ export class RequestApi {
         .catch((err) => {
           rej(err);
         });
+       
     });
   }
 

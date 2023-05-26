@@ -3,7 +3,6 @@
   "version": "0.7.2",
   "description": "AWS Lambda bootloader for ES modules.",
   "type": "module",
-  "module": "lib/index.mjs",
   "exports": {
     ".": "./lib/index.mjs",
     "./index.mjs": "./lib/index.mjs",

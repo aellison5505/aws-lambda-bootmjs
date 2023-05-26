@@ -1,13 +1,13 @@
 {
   "name": "aws-lambda-bootmjs",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "AWS Lambda bootloader for ES modules.",
   "type": "module",
   "module": "lib/index.mjs",
   "exports": {
-    "." : {
-      "import": "./lib/index.mjs"
-    }
+    ".": "./lib/index.mjs",
+    "./index.mjs" : "./lib/index.mjs",
+    "./index_dev.mjs" : "./lib/test/index_dev.mjs"
   },
   "scripts": {
     "test": "tsc -w & mocha -r dotenv/config --watch --parallel lib/test/index.spec.js"
@@ -28,18 +28,14 @@
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
     "@types/node": "~18",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
     "eslint": "^8.41.0",
+    "mocha": "^10.2.0",
     "prettier": "^2.8.8",
+    "sinon": "^15.1.0",
     "stylelint": "^15.6.2",
     "typescript": "^5.0.4"
   },
-  "dependencies": {
-    "chai": "^4.3.7",
-    "chai-as-promised": "^7.1.1",
-    "mocha": "^10.2.0",
-    "sinon": "^15.1.0"
-  },
-  "bin": {
-    "aws-lambda-bootmjs": "./lib/index.mjs"
-  }
+  "bin": "./lib/index.mjs"
 }

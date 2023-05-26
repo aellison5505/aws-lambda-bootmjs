@@ -88,7 +88,7 @@ export class Runtime {
 
         let funcRet = await callFunc(JSON.parse(this.eventData.body), context);
 
-        console.log("funcRet");
+        //console.log("funcRet");
         console.log(funcRet);
 
         let data = await this.reqAPI.sendResponse(
@@ -111,7 +111,7 @@ export class Runtime {
   async getModule(ext: string) {
     return new Promise(async (ret) => {
       try {
-        console.log(`./${this.handler[0]}.${ext}`)
+        //console.log(`./${this.handler[0]}.${ext}`)
         this.lambdaFuc = await import(`${process.env['PWD']}/${this.handler[0]}.${ext}`);
         ret(true);
       } catch {

@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-bootmjs",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "AWS Lambda bootloader for ES modules.",
   "type": "module",
   "exports": {
@@ -27,11 +27,13 @@
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
     "@types/node": "~18.16.15",
+    "@types/semver": "^7",
     "chai": "^4.3.7",
     "chai-as-promised": "^7.1.1",
     "eslint": "^8.41.0",
     "mocha": "^10.2.0",
     "prettier": "^2.8.8",
+    "semver": "^7.5.1",
     "sinon": "^15.1.0",
     "stylelint": "^15.6.2",
     "typescript": "^5.0.4"

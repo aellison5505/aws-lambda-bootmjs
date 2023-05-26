@@ -123,7 +123,7 @@ export class RequestApi {
             headers: res.headers,
             body: data,
           };
-          console.dir(ret)
+          //console.dir(ret)
           resP(ret);
         });
       });

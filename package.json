@@ -6,8 +6,8 @@
   "module": "lib/index.mjs",
   "exports": {
     ".": "./lib/index.mjs",
-    "./index.mjs" : "./lib/index.mjs",
-    "./index_dev.mjs" : "./lib/test/index_dev.mjs"
+    "./index.mjs": "./lib/index.mjs",
+    "./index_dev.mjs": "./lib/test/index_dev.mjs"
   },
   "scripts": {
     "test": "tsc -w & mocha -r dotenv/config --watch --parallel lib/test/index.spec.js"
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/aellison5505/aws-lambda-bootmjs#readme",
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
-    "@types/node": "~18",
+    "@types/node": "~18.16.15",
     "chai": "^4.3.7",
     "chai-as-promised": "^7.1.1",
     "eslint": "^8.41.0",

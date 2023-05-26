@@ -14,7 +14,8 @@ let main = async () => {
     
   } catch (e) {
    // throw new Error(e);
-   process.nextTick(main);
+   //process.nextTick(main);
+   return
   }
 };
 

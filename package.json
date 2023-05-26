@@ -1,15 +1,16 @@
 {
   "name": "aws-lambda-bootmjs",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "AWS Lambda bootloader for ES modules.",
   "type": "module",
   "exports": {
     ".": "./lib/index.mjs",
-    "./index.mjs": "./lib/index.mjs",
-    "./index_dev.mjs": "./lib/test/index_dev.mjs"
+    "./index.mjs": "./index.mjs",
+    "./lib/*": "./lib/*"
   },
   "scripts": {
-    "test": "tsc -w & mocha -r dotenv/config --watch --parallel lib/test/index.spec.js"
+    "test": "tsc -w & mocha -r dotenv/config --watch --parallel lib/test/index.spec.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

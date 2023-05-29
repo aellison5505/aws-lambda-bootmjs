@@ -85,18 +85,18 @@ export class Runtime {
         }
 
         //console.log(context);
-     //   let body:any;
-      //  if(this.eventData.body === Object) {
-      //    body= this.eventData.body
-     //   } else {
-     //     try {
-     //       body = JSON.parse(this.eventData.body)
-      //    } catch {
-     //       body = this.eventData.body || ""
-      //    }
-     //   }
+        let event:any;
+        if(this.eventData.body === Object) {
+          event= this.eventData
+        } else {
+          try {
+            event = JSON.parse(this.eventData)
+          } catch {
+            event = this.eventData || ""
+          }
+        }
 
-        let funcRet = await callFunc(this.eventData.body, context);
+        let funcRet = await callFunc(event, context);
 
         //console.log("funcRet");
         console.log(funcRet);

@@ -1,6 +1,6 @@
-import { captureRejectionSymbol } from "node:events";
+//import { captureRejectionSymbol } from "node:events";
 import { RequestApi } from "./RequestApi.mjs";
-const { existsSync } = await import("node:fs");
+//const { existsSync } = await import("node:fs");
 
 export class Runtime {
   handler: unknown;
@@ -85,8 +85,18 @@ export class Runtime {
         }
 
         //console.log(context);
+     //   let body:any;
+      //  if(this.eventData.body === Object) {
+      //    body= this.eventData.body
+     //   } else {
+     //     try {
+     //       body = JSON.parse(this.eventData.body)
+      //    } catch {
+     //       body = this.eventData.body || ""
+      //    }
+     //   }
 
-        let funcRet = await callFunc(JSON.parse(this.eventData.body), context);
+        let funcRet = await callFunc(this.eventData.body, context);
 
         //console.log("funcRet");
         console.log(funcRet);

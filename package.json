@@ -5,7 +5,7 @@
   "type": "module",
   "exports": {
     ".": "./lib/index.mjs",
-    "./index.mjs": "./index.mjs",
+    "./index.mjs": "./index_es.mjs",
     "./lib/*": "./lib/*"
   },
   "scripts": {

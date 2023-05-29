@@ -2,6 +2,8 @@
 
 const { BootStrap } = await import("./bootstrap.mjs");
 
+let cont = true;
+
 let main = async () => {
   console.log(`handler: ${process.env._HANDLER}`);
   try {
@@ -10,13 +12,15 @@ let main = async () => {
     
     await boot.startRuntime();
     //console.log("done");
-    process.nextTick(main);
+      process.nextTick(main);
     
   } catch (e) {
-   // throw new Error(e);
+    cont = false;
+    throw new Error(e);
    //process.nextTick(main);
    return
   }
 };
+await main();
 
-main();
+

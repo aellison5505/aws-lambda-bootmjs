@@ -5,7 +5,7 @@ yarn exec npm init
 yarn set version stable
 yarn add --dev typescript eslint prettier stylelint
 yarn add @types/node@~18 -D
-yarn add mocha chai chai-as-promised sinon
+yarn add mocha chai chai-as-promised sinon -D
 
 yarn plugin import typescript
 yarn plugin import interactive-tools

@@ -87,10 +87,10 @@ export class Runtime {
         //console.log(context);
         let event:any;
         if(this.eventData.body === Object) {
-          event= this.eventData
+          event= this.eventData.body
         } else {
           try {
-            event = JSON.parse(this.eventData)
+            event = JSON.parse(this.eventData.body)
           } catch {
             event = this.eventData || ""
           }

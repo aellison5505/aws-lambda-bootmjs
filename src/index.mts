@@ -16,11 +16,9 @@ let main = async () => {
     
   } catch (e) {
     cont = false;
-    throw new Error(e);
-   //process.nextTick(main);
-   return
-  }
+    process.exit(1);
+  } 
 };
-await main();
+main();
 
 
